@@ -34,6 +34,15 @@ def create_database_unsharded_collection(client):
         print("Created collection {}".format(COLLECTION))
     return db[COLLECTION]
     
+#sample insert
+def insert_sample_document(collection):
+    """Insert a sample document and return the contents of its _id field"""
+    document_id = collection.insert_one(
+        {FIELD: randint(50, 500)}
+    ).inserted_id
+    print("Inserted document with _id {}".format(document_id))
+    return document_id
+
 def main():
     """Connect to the API for MongoDB, create DB and collection, perform
     CRUD operations
