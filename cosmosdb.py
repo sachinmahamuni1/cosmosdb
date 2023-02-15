@@ -8,7 +8,7 @@ CONNECTION_STRING = getpass.getpass(
 #print("Using " + CONNECTION_STRING + "to connect with MongoDB")
 DATABASE = "sachin-db"
 COLLECTION = "sachin-collection"
-FIELD = "Day"
+FIELD = "salary_in_lacs"
 
 #comment for def test
 def create_database_unsharded_collection(client):
