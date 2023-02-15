@@ -34,7 +34,7 @@ def create_database_unsharded_collection(client):
         print("Created collection {}".format(COLLECTION))
     return db[COLLECTION]
     
-  def main():
+def main():
     """Connect to the API for MongoDB, create DB and collection, perform
     CRUD operations
     """
